@@ -1,0 +1,42 @@
+.registration-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for input separation */
+    outline: none; /* Remove input outline on focus */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .validation-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  

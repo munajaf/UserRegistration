@@ -19,10 +19,10 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    background-color: transparent; /* Remove background color */
-    border: none; /* Remove border */
-    border-bottom: 1px solid #ccc; /* Add a bottom border for input separation */
-    outline: none; /* Remove input outline on focus */
+    background-color: transparent; 
+    border: none; 
+    border-bottom: 1px solid #ccc; 
+    outline: none; 
   }
   
   button {

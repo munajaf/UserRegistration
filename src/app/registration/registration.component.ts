@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  user: any = {}; // Initialize an empty user object
+  user: any = {}; 
   showModal: boolean = false;
 
   onSubmit() {
-    // Handle form submission here (e.g., send data to a server)
     console.log('User submitted:', this.user);
     this.showModal = true;
   }

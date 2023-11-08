@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -8,9 +9,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ModalComponent {
   @Input() userData: any;
   @Input() showModal: boolean = false;
-  @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
 
-  close() {
-    this.closeModal.emit();
+  constructor(private router: Router) {
+    
+  }
+
+  closeModal() {
+    this.showModal = false;
+    this.router.navigate(['/welcome']);
+    console.log('here')
   }
 }

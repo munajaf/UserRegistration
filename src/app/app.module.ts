@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { ModalComponent } from './modal/modal.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     ModalComponent,
+    WelcomeComponent,
   ],
 
   imports: [

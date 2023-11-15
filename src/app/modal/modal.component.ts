@@ -13,5 +13,8 @@ export class ModalComponent {
   closeModal() {
     this.showModal = false;
     this.router.navigate(['/welcome']);
+    
   }
+
+  
 }

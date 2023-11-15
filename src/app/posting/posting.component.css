@@ -1,0 +1,23 @@
+/* welcome.component.css */
+
+.table-container {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Optional: Add styling for header row */
+.table-header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}

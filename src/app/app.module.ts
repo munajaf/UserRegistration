@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { ModalComponent } from './modal/modal.component';
+import { PostingComponent } from './posting/posting.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
@@ -12,13 +15,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppComponent,
     RegistrationComponent,
     ModalComponent,
+    PostingComponent,
+    NotFoundComponent,
     WelcomeComponent,
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

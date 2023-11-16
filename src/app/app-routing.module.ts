@@ -4,16 +4,20 @@ import { RegistrationComponent } from './registration/registration.component';
 import { PostingComponent } from './posting/posting.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import { PostDetailComponent } from './post-detail/post-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/registration', pathMatch: 'full' },
+  //register page
   { path: 'registration', component: RegistrationComponent },
+  //welcome page
   { path: 'welcome', component: WelcomeComponent },
+  //posting page
   { path: 'post', component: PostingComponent },
+  { path: 'post/:id', component: PostDetailComponent },
+  //notfound page
   { path: '404', component: NotFoundComponent }, 
-  { path: '**', redirectTo: '/404' }, 
+  { path: '**', redirectTo: '/404' },  
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

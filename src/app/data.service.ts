@@ -7,7 +7,9 @@ import { IPost } from './posting/data';
   providedIn: 'root',
 })
 export class DataService {
-  private _url: string = "assets/data/data.json";  // Update the path here
+
+  //path of the data store
+  private _url: string = "assets/data/data.json";  
 
   constructor(private http: HttpClient) {}
 

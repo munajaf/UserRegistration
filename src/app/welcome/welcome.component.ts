@@ -9,10 +9,8 @@ import { Router } from '@angular/router';
 export class WelcomeComponent {
   constructor(private router: Router) {
   }
-  postPage() {
-    
+  postPage() {    
     this.router.navigate(['/post']);
-    
   }
 
 }

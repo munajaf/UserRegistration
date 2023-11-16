@@ -1,5 +1,4 @@
 <div>
-
   <div class="table-container">
     <div class="table-row table-header">
       <div class="table-cell">User ID</div>
@@ -9,17 +8,20 @@
       <div class="table-cell">Actions</div>
     </div>
 
-    <div class="table-row" *ngFor="let post of posts">
+    <div class="table-row" *ngFor="let post of pagedPosts">
       <div class="table-cell">{{ post.userId }}</div>
       <div class="table-cell">{{ post.id }}</div>
       <div class="table-cell">{{ post.title }}</div>
       <div class="table-cell">{{ post.body }}</div>
       <div class="table-cell">
-        <button (click)="viewPost(post)">View</button>
+        <a [routerLink]="['/post', post.id]">View</a>
       </div>
     </div>
   </div>
+
+  <div class="pagination-controls">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
 </div>
-
-
-

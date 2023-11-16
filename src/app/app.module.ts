@@ -9,6 +9,7 @@ import { PostingComponent } from './posting/posting.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     PostingComponent,
     NotFoundComponent,
     WelcomeComponent,
+    PostDetailComponent,
   ],
 
   imports: [

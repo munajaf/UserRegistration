@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IPost } from './posting/data';
+import { Todo } from './todo/todoData';
 
 @Injectable({
   providedIn: 'root',
@@ -9,12 +9,11 @@ import { IPost } from './posting/data';
 export class DataService {
 
   //path of the data store
-  //private _url: string = "assets/data/data.json"; 
-  private _url: string = "https://jsonplaceholder.typicode.com/posts"; 
-
+  private _url: string = "https://jsonplaceholder.typicode.com/todos"; 
   constructor(private http: HttpClient) {}
-
-  getData(): Observable<IPost[]> {
-    return this.http.get<IPost[]>(this._url);
+  getData(): Observable<Todo[]> {
+    return this.http.get<Todo[]>(this._url);
   }
+ 
+
 }

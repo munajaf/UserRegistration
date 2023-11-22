@@ -12,5 +12,8 @@ export class WelcomeComponent {
   postPage() {    
     this.router.navigate(['/post']);
   }
+  todoPage() {    
+    this.router.navigate(['/todo']);
+  }
 
 }

@@ -1,3 +1,13 @@
+<div class="">
+  <app-navbar></app-navbar>
+  <div class="">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="isLoading; else content">  
+  <p>Loading...</p>
+</div>
+<ng-template #content>
 <div>
   <div class="table-container">
     <div class="table-row table-header">
@@ -14,7 +24,8 @@
       <div class="table-cell">{{ post.title }}</div>
       <div class="table-cell">{{ post.body }}</div>
       <div class="table-cell">
-        <a [routerLink]="['/post', post.id]">View</a>
+        <!-- <a [routerLink]="['/post', post.id]">View</a> -->
+        <a class="view-button" (click)="onViewClick(post.id)">View</a>
       </div>
     </div>
   </div>
@@ -25,3 +36,4 @@
     <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
   </div>
 </div>
+</ng-template>

@@ -14,6 +14,10 @@ export class DataService {
   getData(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this._url);
   }
+  deletePost(postId: number): Observable<void> {
+    const deleteUrl = `${this._url}/${postId}`; 
+    return this.http.delete<void>(deleteUrl);
+  }
  
 
 }

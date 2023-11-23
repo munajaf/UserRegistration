@@ -17,4 +17,15 @@ export class DataService {
   getData(): Observable<IPost[]> {
     return this.http.get<IPost[]>(this._url);
   }
+
+  getDataPost(postId: number): Observable<IPost> {
+    const urlWithPostId = `${this._url}/${postId}`;
+    return this.http.get<IPost>(urlWithPostId);
+  }
+
+ 
+  
+  
+
+  
 }

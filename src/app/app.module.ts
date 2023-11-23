@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { TodoComponent } from './todo/todo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TodoComponent } from './todo/todo.component';
     WelcomeComponent,
     PostDetailComponent,
     TodoComponent,
+    NavbarComponent,
   ],
 
   imports: [

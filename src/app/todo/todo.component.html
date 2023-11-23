@@ -1,3 +1,13 @@
+<div class="">
+  <app-navbar></app-navbar>
+  <div class="">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="isLoading; else content">  
+  <p>Loading...</p>
+</div>
+<ng-template #content>
 <div>
     <div class="table-container">
       <div class="table-row table-header">
@@ -26,4 +36,4 @@
       <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
     </div>
   </div>
-  
+</ng-template>

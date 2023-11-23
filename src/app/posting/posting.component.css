@@ -51,3 +51,18 @@
 .pagination-controls span {
   font-size: 14px;
 }
+
+a.view-button {
+  color: #fff;
+  background-color: blue;
+  border: 1px solid blue;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.view-button:hover {
+  background-color: #2c78c9;
+  border-color: #2c78c9;
+}

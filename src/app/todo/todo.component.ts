@@ -15,24 +15,37 @@ export class TodoComponent implements OnInit {
   public pageSize: number = 10;
   public currentPage: number = 1;
   public totalPages: number = 0;
+  public isLoading: boolean = true;
 
   constructor(private _dataService: DataService) {}
 
   ngOnInit() {
+    this.isLoading = true;
     this._dataService.getData().subscribe(
+      
       data => {
         this.posts = data;
         this.updatePagedPosts();
+        this.isLoading = false;
       },
       error => {
         console.error('Error fetching data:', error);
+        this.isLoading = false;
       }
     );
   }
-  deletePost(postId: number): void {
-    this.posts = this.posts.filter(post => post.id !== postId);
-    this.updatePagedPosts();
+  deletePost(postId: number) {
+    this._dataService.deletePost(postId).subscribe(
+      () => {
+        this.posts = this.posts.filter(post => post.id !== postId);
+        this.updatePagedPosts();
+      },
+      error => {
+        console.error('Error deleting post:', error);
+      }
+    );
   }
+  
   
   updatePagedPosts() {
     const startIndex = (this.currentPage - 1) * this.pageSize;

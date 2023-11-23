@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',

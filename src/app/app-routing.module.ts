@@ -17,6 +17,8 @@ const routes: Routes = [
   //posting page
   { path: 'post', component: PostingComponent },
   { path: 'post/:id', component: PostDetailComponent },
+  
+
   //notfound page
   { path: '404', component: NotFoundComponent }, 
   { path: '**', redirectTo: '/404' },  
